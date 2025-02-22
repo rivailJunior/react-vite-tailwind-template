@@ -1,31 +1,26 @@
 {
   "compilerOptions": {
-    "module": "esnext",
-    "useDefineForClassFields": true,
     "target": "ESNext",
-    "lib": ["esnext", "dom"],
+    "useDefineForClassFields": true,
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "allowJs": true,
-    "moduleResolution": "node",
-    "strict": true,
-    "noImplicitAny": true,
-    "noImplicitReturns": true,
-    "noImplicitThis": true,
-    "strictNullChecks": true,
-    "strictFunctionTypes": true,
     "skipLibCheck": true,
-    "preserveConstEnums": true,
-    "sourceMap": true,
-    "declaration": true,
-    "downlevelIteration": true,
-    "resolveJsonModule": true,
+    "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "experimentalDecorators": true,
-    "baseUrl": ".",
-    "rootDir": ".",
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
     "jsx": "react-jsx",
+    "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
+    "types": ["vitest/globals", "@testing-library/jest-dom"]
   },
-  "include": ["./src", "vite-env.d.ts"]
+  "include": ["./src", "./@types", "./mocks", "scripts", "./**.js", "./**.ts", "eslint.config.mjs"],
+  "exclude": ["dist"]
 }

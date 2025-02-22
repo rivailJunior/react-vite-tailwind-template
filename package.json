@@ -11,7 +11,9 @@
     "lint": "eslint --quiet src --ext .ts,.tsx && stylelint src/**/*.less",
     "lint:fix": "eslint --quiet --fix src --ext .ts,.tsx && stylelint --fix src/**/*.less",
     "i18next-resources-for-ts": "i18next-resources-for-ts toc -i ./src/i18n/locales/en -o ./src/types/resources.ts",
-    "translate": "transmart"
+    "translate": "transmart",
+    "test": "vitest",
+    "coverage": "vitest run --coverage"
   },
   "dependencies": {
     "@loadable/component": "^5.15.3",
@@ -32,7 +34,9 @@
     "react-router": "^7.2.0",
     "react-router-dom": "^6.10.0",
     "tailwind-merge": "^1.14.0",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "vite-plugin-environment": "^1.1.3",
+    "vitest": "^3.0.6"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.5.1",
@@ -72,6 +76,15 @@
     "typescript": "^5.3.3",
     "vite": "^4.2.0",
     "vite-plugin-external": "^1.2.8",
-    "vite-plugin-svgr": "^2.4.0"
+    "vite-plugin-svgr": "^2.4.0",
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.2.0",
+    "@testing-library/user-event": "^14.6.1",
+    "@vitest/ui": "^2.1.6",
+    "jsdom": "^26.0.0",
+    "msw": "^2.7.1",
+    "@vitejs/plugin-react-swc": "^3.8.0",
+    "ts-expect": "^1.3.0"
   }
 }
